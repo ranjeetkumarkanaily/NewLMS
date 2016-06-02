@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'teachers/:id/studentsprogress' => 'teachers#studentsprogress'
+
   #get 'products/:id' => 'catalog#view'
   get 'students/:id/setprogress/:lesson_content' => 'students#setprogress'
   get 'students/:id/progress' => 'students#progress'
