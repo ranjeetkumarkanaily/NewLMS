@@ -2,6 +2,8 @@ class Student < ActiveRecord::Base
 	has_many :completed_contents
 	has_many :contents, :through => :completed_contents
 
+	belongs_to :teacher
+
 	def createProgress content_id
 		CompletedContent.where(content_id: content_id, student_id: self.id).first_or_create
 	end
