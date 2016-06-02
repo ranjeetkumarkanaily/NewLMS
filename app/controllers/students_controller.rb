@@ -7,6 +7,6 @@ class StudentsController < ApplicationController
 
 	def progress
 		student = Student.find(params[:id])
-		render :json => student.progress	
+		render :json => {student.name => student.progress}
 	end
 end
